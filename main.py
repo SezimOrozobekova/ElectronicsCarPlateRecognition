@@ -20,6 +20,7 @@ gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 # Обнаружение номерных знаков
 plates = plate_detector.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5)
 
+
 for (x, y, w, h) in plates:
     area = w * h
     if area > min_area:
